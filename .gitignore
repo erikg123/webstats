@@ -1,2 +1,5 @@
 node_modules
 dist
+server/server
+server/server_local
+server/webstats.db
