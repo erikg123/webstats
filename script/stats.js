@@ -1,13 +1,13 @@
-const trackPageView = (page, websiteId) => {
-  sendStatsData({ name: 'pageview', page, websiteId });
+window.trackPageView = (page, projectId) => {
+  sendStatsData({ name: 'pageview', page, projectId });
 };
 
-const trackCustomEvent = (name, page, websiteId) => {
-  sendStatsData({ name, page, websiteId });
+window.trackCustomEvent = (name, page, projectId) => {
+  sendStatsData({ name, page, projectId });
 };
 
 const sendStatsData = (data) => {
-  fetch('API_URL/event', {
+  fetch('https://83.249.98.222/api/event', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
